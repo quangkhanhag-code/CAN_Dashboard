@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qt/qml/CAN_Dashboard/">
+    <file alias="Main.qml">C:/Users/USER/Documents/CAN_Dashboard/Main.qml</file>
+    <file alias="DongHoTocDo.qml">C:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml</file>
+  </qresource>
+</RCC>
+
