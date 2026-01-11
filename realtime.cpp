@@ -26,5 +26,5 @@ void RealTime::setdatetime(const QString &newDatetime)
 
 void RealTime::printDateTime()
 {
-    setdatetime(QDateTime::currentDateTime().toString());
+    setdatetime(QDateTime::currentDateTime().toString("HH:mm"));
 }

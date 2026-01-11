@@ -9,8 +9,8 @@ Window {
     height: 500
     color: "#000"
 
-    property real speed: 0
-    property real rpm: 0
+    property real speed: keyArea.gialapspeed
+    property real rpm: keyArea.gialaprpm
     // property real temp: 70
     // property real load: 0
     // property real battery: 12.6
@@ -94,7 +94,7 @@ Window {
             text: realTime.datetime
             width: parent.width
             //wrapMode: Text.WorldWrap
-            font.family: carfont.name
+            //font.family: carfont.name
             font.pixelSize: 25
             color: "white"
             antialiasing: true
@@ -110,19 +110,47 @@ Window {
         width: parent.width/2
         x: (parent.width-width)/2
         color: "red"
-
     }
-
-    Timer
+    Rectangle
     {
-        interval: 100
-        running: true
-        repeat: true
-        onTriggered:
+        id: keyArea
+        anchors.fill: parent
+        color: "transparent"
+        focus: true
+        property real throttle: 0
+        property real gialapspeed: 0
+        property real gialaprpm: 500 //500 = chế độ không tải
+        property real tisotruyenCVT: 2 //Tỉ số truyền biến thiên giả lập
+        Keys.onPressed: (event)=> {
+            if (event.key === Qt.Key_Up) throttle =1
+            if (event.key === Qt.Key_Down) throttle =0
+        }
+        Timer
         {
-            root.speed = (root.speed + 1) % 241
-            root.rpm = (root.rpm + 50) % 8001
+            interval: 16
+            running: true
+            repeat: true
+            onTriggered: {
+               // Gia toc
+                let engineForce = keyArea.throttle * 400
+                    let drag = keyArea.gialapspeed * 3
+                    let accel = (engineForce - drag) * 0.002
+                    keyArea.gialapspeed += accel
+                    if (keyArea.gialapspeed < 0) keyArea.gialapspeed = 0
+                // Chuyen so CVT gialap
+                    let targetRPM
 
+                        if (keyArea.gialapspeed < 30)
+                            targetRPM = 500 + speed * 20
+                        else if (keyArea.gialapspeed < 80)
+                            targetRPM = 1200
+                        else
+                            targetRPM = 1200 + (keyArea.gialapspeed - 80) * 15
+                // Lam tron gia lap RPM
+                keyArea.gialaprpm += (targetRPM - keyArea.gialaprpm) * 0.05
+                //CVT tu doi ti so truyen
+                keyArea.tisotruyenCVT = keyArea.gialaprpm / (keyArea.gialapspeed + 1)
+            }
         }
     }
 }

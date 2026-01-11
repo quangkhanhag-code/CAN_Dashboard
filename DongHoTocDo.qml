@@ -82,10 +82,18 @@ Item {
         x: centerPoint.x - needle.width / 2
         y: centerPoint.y - needle.height
         z: 1
+        property real needleAngle: -120 + (root.speed / root.maxSpeed) * 240
         transform: Rotation {
+            id: rot
             origin.x: needle.width / 2
             origin.y: needle.height
-            angle:  -120 + (root.speed / root.maxSpeed) * 240
+            angle:  needle.needleAngle
+        }
+        Behavior on needleAngle {
+            NumberAnimation {
+                duration: 300
+                easing.type: Easing.Linear
+            }
         }
     }
     Image {
