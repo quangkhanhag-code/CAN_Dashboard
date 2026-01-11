@@ -43,11 +43,12 @@ Item {
             property int value : index * root.vachchianho
             property bool major: value % root.vachchialon === 0
 
-            width: major ? parent.width * 0.02 : parent.width * 0.01
+            width: major ? parent.width * 0.01 : parent.width * 0.005
             height: major ? parent.height * 0.1 : parent.height * 0.05
             color: "white"
             x: cx - width/2
-            y: cy - background.radius
+            y: cy - m_radius
+            antialiasing: true
 
             transform: Rotation {
                 origin.x: width / 2

@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import RealTimeLib 1.0
 
 Window {
     id: root
@@ -10,18 +11,32 @@ Window {
 
     property real speed: 0
     property real rpm: 0
-    property real temp: 70
-    property real load: 0
-    property real battery: 12.6
-    property bool flag1: false
-    property bool flag2: false
+    // property real temp: 70
+    // property real load: 0
+    // property real battery: 12.6
+    // property bool flag1: false
+    // property bool flag2: false
+    // FontLoader
+    // {
+    //     id: carfont
+    //     source: "qrc:/assets/font/Inter-VariableFont_opsz,wght.ttf"
+    // }
+
+    RealTime
+    {
+        id: realTime
+        Component.onCompleted: {
+            startTimer()
+        }
+    }
 
     Rectangle
     {
         id: rectSpeed
-        height: root.height
         width: root.width/3
+        height: rectSpeed.width
         anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
         color: "lightblue"
         DongHoTocDo
         {
@@ -34,19 +49,80 @@ Window {
     }
     Rectangle
     {
-        id:rectControl
-        height: root.height
+        id:rectDisplay
         width: root.width/3
+        height: rectDisplay.width
         anchors.left: rectSpeed.right
+        anchors.verticalCenter: parent.verticalCenter
         color: "darkblue"
     }
 
     Rectangle
     {
         id: rectRpm
-        height: root.height
         width: root.width/3
+        height: rectRpm.width
         anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        DongHoRPM
+        {
+            id: rpmGause
+            width: parent.width
+            height: width
+            anchors.verticalCenter: parent.verticalCenter
+            rpm: root.rpm
+        }
     }
-    ?
+    Rectangle
+    {
+        id: rectDiag
+        anchors.bottom: rectSpeed.top
+        anchors.top: parent.top
+        width: parent.width/2
+        x: (parent.width-width)/2
+        color: "orange"
+    }
+    Rectangle
+    {
+        id: realTimeDisplay
+        anchors.left: rectDiag.right
+        anchors.right: parent.right
+        height: rectDiag.height
+        color: "transparent"
+        Text {
+            id: displayTimer
+            text: realTime.datetime
+            width: parent.width
+            //wrapMode: Text.WorldWrap
+            font.family: carfont.name
+            font.pixelSize: 25
+            color: "white"
+            antialiasing: true
+            //renderType: Text.NativeRendering
+        }
+    }
+
+    Rectangle
+    {
+        id: rectButton
+        anchors.top: rectDisplay.bottom
+        anchors.bottom: parent.bottom
+        width: parent.width/2
+        x: (parent.width-width)/2
+        color: "red"
+
+    }
+
+    Timer
+    {
+        interval: 100
+        running: true
+        repeat: true
+        onTriggered:
+        {
+            root.speed = (root.speed + 1) % 241
+            root.rpm = (root.rpm + 50) % 8001
+
+        }
+    }
 }

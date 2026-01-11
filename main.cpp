@@ -1,9 +1,11 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include "realtime.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+    qmlRegisterType<RealTime>("RealTimeLib", 1, 0, "RealTime");
 
     QQmlApplicationEngine engine;
     QObject::connect(

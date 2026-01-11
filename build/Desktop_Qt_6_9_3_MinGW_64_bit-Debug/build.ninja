@@ -47,7 +47,7 @@ cmake_ninja_workdir = C$:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_
 #############################################
 # Order-only phony target for appCAN_Dashboard
 
-build cmake_object_order_depends_target_appCAN_Dashboard: phony || .qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp .qt/rcc/qrc_qmake_CAN_Dashboard.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_qmlcache_loader.cpp CAN_Dashboard/appCAN_Dashboard.qmltypes appCAN_Dashboard_autogen appCAN_Dashboard_autogen/mocs_compilation.cpp appCAN_Dashboard_autogen/timestamp appCAN_Dashboard_autogen_timestamp_deps appCAN_Dashboard_copy_qml appCAN_Dashboard_copy_res appCAN_Dashboard_qmlimportscan appcan_dashboard_qmltyperegistrations.cpp meta_types/appCAN_Dashboard_json_file_list.txt meta_types/appCAN_Dashboard_json_file_list.txt.timestamp meta_types/qt6appcan_dashboard_debug_metatypes.json meta_types/qt6appcan_dashboard_debug_metatypes.json.gen
+build cmake_object_order_depends_target_appCAN_Dashboard: phony || .qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp .qt/rcc/qrc_qmake_CAN_Dashboard.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_qmlcache_loader.cpp CAN_Dashboard/appCAN_Dashboard.qmltypes appCAN_Dashboard_autogen appCAN_Dashboard_autogen/mocs_compilation.cpp appCAN_Dashboard_autogen/timestamp appCAN_Dashboard_autogen_timestamp_deps appCAN_Dashboard_copy_qml appCAN_Dashboard_copy_res appCAN_Dashboard_qmlimportscan appcan_dashboard_qmltyperegistrations.cpp meta_types/appCAN_Dashboard_json_file_list.txt meta_types/appCAN_Dashboard_json_file_list.txt.timestamp meta_types/qt6appcan_dashboard_debug_metatypes.json meta_types/qt6appcan_dashboard_debug_metatypes.json.gen
 
 build CMakeFiles/appCAN_Dashboard.dir/appCAN_Dashboard_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__appCAN_Dashboard_unscanned_Debug C$:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/appCAN_Dashboard_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_appCAN_Dashboard
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMETA_LIB -DQT_QMLMODELS_LIB -DQT_QMLWORKERSCRIPT_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
@@ -81,6 +81,14 @@ build CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/
   OBJECT_DIR = CMakeFiles\appCAN_Dashboard.dir
   OBJECT_FILE_DIR = CMakeFiles\appCAN_Dashboard.dir\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.qt\rcc
 
+build CMakeFiles/appCAN_Dashboard.dir/realtime.cpp.obj: CXX_COMPILER__appCAN_Dashboard_unscanned_Debug C$:/Users/USER/Documents/CAN_Dashboard/realtime.cpp || cmake_object_order_depends_target_appCAN_Dashboard
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMETA_LIB -DQT_QMLMODELS_LIB -DQT_QMLWORKERSCRIPT_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appCAN_Dashboard.dir\realtime.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/appCAN_Dashboard_autogen/include -IC:/Users/USER/Documents/CAN_Dashboard -isystem C:/Qt/6.9.3/mingw_64/include/QtQml/6.9.3 -isystem C:/Qt/6.9.3/mingw_64/include/QtQml/6.9.3/QtQml -isystem C:/Qt/6.9.3/mingw_64/include/QtCore/6.9.3 -isystem C:/Qt/6.9.3/mingw_64/include/QtCore/6.9.3/QtCore -isystem C:/Qt/6.9.3/mingw_64/include/QtCore -isystem C:/Qt/6.9.3/mingw_64/include -isystem C:/Qt/6.9.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.3/mingw_64/include/QtQml -isystem C:/Qt/6.9.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.9.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.9.3/mingw_64/include/QtQuick -isystem C:/Qt/6.9.3/mingw_64/include/QtGui -isystem C:/Qt/6.9.3/mingw_64/include/QtQmlMeta -isystem C:/Qt/6.9.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.9.3/mingw_64/include/QtQmlWorkerScript -isystem C:/Qt/6.9.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appCAN_Dashboard.dir
+  OBJECT_FILE_DIR = CMakeFiles\appCAN_Dashboard.dir
+
 build CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_qmlcache_loader.cpp.obj: CXX_COMPILER__appCAN_Dashboard_unscanned_Debug C$:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_qmlcache_loader.cpp || cmake_object_order_depends_target_appCAN_Dashboard
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMETA_LIB -DQT_QMLMODELS_LIB -DQT_QMLWORKERSCRIPT_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\appCAN_Dashboard.dir\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.rcc\qmlcache\appCAN_Dashboard_qmlcache_loader.cpp.obj.d
@@ -105,6 +113,14 @@ build CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/
   OBJECT_DIR = CMakeFiles\appCAN_Dashboard.dir
   OBJECT_FILE_DIR = CMakeFiles\appCAN_Dashboard.dir\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.rcc\qmlcache
 
+build CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp.obj: CXX_COMPILER__appCAN_Dashboard_unscanned_Debug C$:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp || cmake_object_order_depends_target_appCAN_Dashboard
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMETA_LIB -DQT_QMLMODELS_LIB -DQT_QMLWORKERSCRIPT_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appCAN_Dashboard.dir\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.rcc\qmlcache\appCAN_Dashboard_DongHoRPM_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/appCAN_Dashboard_autogen/include -IC:/Users/USER/Documents/CAN_Dashboard -isystem C:/Qt/6.9.3/mingw_64/include/QtQml/6.9.3 -isystem C:/Qt/6.9.3/mingw_64/include/QtQml/6.9.3/QtQml -isystem C:/Qt/6.9.3/mingw_64/include/QtCore/6.9.3 -isystem C:/Qt/6.9.3/mingw_64/include/QtCore/6.9.3/QtCore -isystem C:/Qt/6.9.3/mingw_64/include/QtCore -isystem C:/Qt/6.9.3/mingw_64/include -isystem C:/Qt/6.9.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.3/mingw_64/include/QtQml -isystem C:/Qt/6.9.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.9.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.9.3/mingw_64/include/QtQuick -isystem C:/Qt/6.9.3/mingw_64/include/QtGui -isystem C:/Qt/6.9.3/mingw_64/include/QtQmlMeta -isystem C:/Qt/6.9.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.9.3/mingw_64/include/QtQmlWorkerScript -isystem C:/Qt/6.9.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appCAN_Dashboard.dir
+  OBJECT_FILE_DIR = CMakeFiles\appCAN_Dashboard.dir\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.rcc\qmlcache
+
 build CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp.obj: CXX_COMPILER__appCAN_Dashboard_unscanned_Debug C$:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp || cmake_object_order_depends_target_appCAN_Dashboard
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMETA_LIB -DQT_QMLMODELS_LIB -DQT_QMLWORKERSCRIPT_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\appCAN_Dashboard.dir\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.qt\rcc\qrc_appCAN_Dashboard_raw_qml_0.cpp.obj.d
@@ -121,7 +137,7 @@ build CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/
 #############################################
 # Link the executable appCAN_Dashboard.exe
 
-build appCAN_Dashboard.exe: CXX_EXECUTABLE_LINKER__appCAN_Dashboard_Debug CMakeFiles/appCAN_Dashboard.dir/appCAN_Dashboard_autogen/mocs_compilation.cpp.obj CMakeFiles/appCAN_Dashboard.dir/main.cpp.obj CMakeFiles/appCAN_Dashboard.dir/appcan_dashboard_qmltyperegistrations.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_CAN_Dashboard.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_qmlcache_loader.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp.obj | C$:/Qt/6.9.3/mingw_64/lib/libQt6Quick.a C$:/Qt/6.9.3/mingw_64/lib/libQt6QmlMeta.a C$:/Qt/6.9.3/mingw_64/lib/libQt6QmlWorkerScript.a C$:/Qt/6.9.3/mingw_64/lib/libQt6QmlModels.a C$:/Qt/6.9.3/mingw_64/lib/libQt6Qml.a C$:/Qt/6.9.3/mingw_64/lib/libQt6Network.a C$:/Qt/6.9.3/mingw_64/lib/libQt6OpenGL.a C$:/Qt/6.9.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.3/mingw_64/lib/libQt6EntryPoint.a || appCAN_Dashboard_autogen appCAN_Dashboard_autogen_timestamp_deps appCAN_Dashboard_copy_qml appCAN_Dashboard_copy_res appCAN_Dashboard_qmlimportscan
+build appCAN_Dashboard.exe: CXX_EXECUTABLE_LINKER__appCAN_Dashboard_Debug CMakeFiles/appCAN_Dashboard.dir/appCAN_Dashboard_autogen/mocs_compilation.cpp.obj CMakeFiles/appCAN_Dashboard.dir/main.cpp.obj CMakeFiles/appCAN_Dashboard.dir/appcan_dashboard_qmltyperegistrations.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_CAN_Dashboard.cpp.obj CMakeFiles/appCAN_Dashboard.dir/realtime.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_qmlcache_loader.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp.obj CMakeFiles/appCAN_Dashboard.dir/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp.obj | C$:/Qt/6.9.3/mingw_64/lib/libQt6Quick.a C$:/Qt/6.9.3/mingw_64/lib/libQt6QmlMeta.a C$:/Qt/6.9.3/mingw_64/lib/libQt6QmlWorkerScript.a C$:/Qt/6.9.3/mingw_64/lib/libQt6QmlModels.a C$:/Qt/6.9.3/mingw_64/lib/libQt6Qml.a C$:/Qt/6.9.3/mingw_64/lib/libQt6Network.a C$:/Qt/6.9.3/mingw_64/lib/libQt6OpenGL.a C$:/Qt/6.9.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.3/mingw_64/lib/libQt6EntryPoint.a || appCAN_Dashboard_autogen appCAN_Dashboard_autogen_timestamp_deps appCAN_Dashboard_copy_qml appCAN_Dashboard_copy_res appCAN_Dashboard_qmlimportscan
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.9.3/mingw_64/lib/libQt6Quick.a  C:/Qt/6.9.3/mingw_64/lib/libQt6QmlMeta.a  C:/Qt/6.9.3/mingw_64/lib/libQt6QmlWorkerScript.a  C:/Qt/6.9.3/mingw_64/lib/libQt6QmlModels.a  C:/Qt/6.9.3/mingw_64/lib/libQt6Qml.a  C:/Qt/6.9.3/mingw_64/lib/libQt6Network.a  -lws2_32  C:/Qt/6.9.3/mingw_64/lib/libQt6OpenGL.a  C:/Qt/6.9.3/mingw_64/lib/libQt6Gui.a  C:/Qt/6.9.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.9.3/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -luser32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -196,13 +212,13 @@ build appCAN_Dashboard_copy_res: phony CMakeFiles/appCAN_Dashboard_copy_res .qt/
 #############################################
 # Utility command for module_appCAN_Dashboard_aotstats_target
 
-build module_appCAN_Dashboard_aotstats_target: phony CMakeFiles/module_appCAN_Dashboard_aotstats_target .rcc/qmlcache/module_appCAN_Dashboard.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.aotstats appcan_dashboard_qmltyperegistrations.cpp CAN_Dashboard/appCAN_Dashboard.qmltypes appCAN_Dashboard_qmltyperegistration
+build module_appCAN_Dashboard_aotstats_target: phony CMakeFiles/module_appCAN_Dashboard_aotstats_target .rcc/qmlcache/module_appCAN_Dashboard.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.aotstats appcan_dashboard_qmltyperegistrations.cpp CAN_Dashboard/appCAN_Dashboard.qmltypes appCAN_Dashboard_qmltyperegistration
 
 
 #############################################
 # Utility command for all_aotstats
 
-build all_aotstats: phony CMakeFiles/all_aotstats .rcc/qmlcache/all_aotstats.aotstats .rcc/qmlcache/all_aotstats.txt .rcc/qmlcache/module_appCAN_Dashboard.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.aotstats appcan_dashboard_qmltyperegistrations.cpp CAN_Dashboard/appCAN_Dashboard.qmltypes module_appCAN_Dashboard_aotstats_target
+build all_aotstats: phony CMakeFiles/all_aotstats .rcc/qmlcache/all_aotstats.aotstats .rcc/qmlcache/all_aotstats.txt .rcc/qmlcache/module_appCAN_Dashboard.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.aotstats appcan_dashboard_qmltyperegistrations.cpp CAN_Dashboard/appCAN_Dashboard.qmltypes module_appCAN_Dashboard_aotstats_target
 
 
 #############################################
@@ -344,9 +360,18 @@ build .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp .rcc/qmlcache/appCAN_Da
 
 
 #############################################
+# Custom command for .rcc\qmlcache\appCAN_Dashboard_DongHoRPM_qml.cpp
+
+build .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp.aotstats | ${cmake_ninja_workdir}.rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp ${cmake_ninja_workdir}.rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp.aotstats: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/bin/qmlcachegen.exe C$:/Users/USER/Documents/CAN_Dashboard/DongHoRPM.qml .qt/rcc/qmake_CAN_Dashboard.qrc .qt/rcc/appCAN_Dashboard_raw_qml_0.qrc CAN_Dashboard/appCAN_Dashboard.qmltypes CAN_Dashboard/qmldir
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache && C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.3/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/CAN_Dashboard/DongHoRPM.qml -I C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug -I C:/Qt/6.9.3/mingw_64/qml -i C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/CAN_Dashboard/qmldir --resource C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qmake_CAN_Dashboard.qrc --resource C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/appCAN_Dashboard_raw_qml_0.qrc --dump-aot-stats --module-id=CAN_Dashboard(appCAN_Dashboard) -o C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp C:/Users/USER/Documents/CAN_Dashboard/DongHoRPM.qml"
+  DESC = Generating .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp, .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp.aotstats
+  restat = 1
+
+
+#############################################
 # Custom command for .qt\rcc\qrc_appCAN_Dashboard_raw_qml_0.cpp
 
-build .qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp: CUSTOM_COMMAND C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml .qt/rcc/appCAN_Dashboard_raw_qml_0.qrc C$:/Qt/6.9.3/mingw_64/bin/rcc.exe || appCAN_Dashboard_autogen appCAN_Dashboard_autogen_timestamp_deps appCAN_Dashboard_copy_qml appCAN_Dashboard_copy_res appCAN_Dashboard_qmlimportscan
+build .qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp: CUSTOM_COMMAND C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoRPM.qml C$:/Users/USER/Documents/CAN_Dashboard/asserts_resource.qrc .qt/rcc/appCAN_Dashboard_raw_qml_0.qrc C$:/Qt/6.9.3/mingw_64/bin/rcc.exe || appCAN_Dashboard_autogen appCAN_Dashboard_autogen_timestamp_deps appCAN_Dashboard_copy_qml appCAN_Dashboard_copy_res appCAN_Dashboard_qmlimportscan
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug && C:\Qt\6.9.3\mingw_64\bin\rcc.exe --output C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/qrc_appCAN_Dashboard_raw_qml_0.cpp --name appCAN_Dashboard_raw_qml_0 C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/rcc/appCAN_Dashboard_raw_qml_0.qrc --no-zstd"
   DESC = Running rcc for resource appCAN_Dashboard_raw_qml_0
   restat = 1
@@ -381,21 +406,21 @@ build CMakeFiles/appCAN_Dashboard_qmltyperegistration | ${cmake_ninja_workdir}CM
 #############################################
 # Custom command for CMakeFiles\appCAN_Dashboard_qmllint
 
-build CMakeFiles/appCAN_Dashboard_qmllint | ${cmake_ninja_workdir}CMakeFiles/appCAN_Dashboard_qmllint: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/bin/qmllint.exe C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml .rcc/qmllint/appCAN_Dashboard.rsp || all_qmltyperegistrations appCAN_Dashboard_qmltyperegistration
+build CMakeFiles/appCAN_Dashboard_qmllint | ${cmake_ninja_workdir}CMakeFiles/appCAN_Dashboard_qmllint: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/bin/qmllint.exe C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoRPM.qml .rcc/qmllint/appCAN_Dashboard.rsp || all_qmltyperegistrations appCAN_Dashboard_qmltyperegistration
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\USER\Documents\CAN_Dashboard && C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.3/mingw_64/bin/qmllint.exe @C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmllint/appCAN_Dashboard.rsp"
 
 
 #############################################
 # Custom command for CMakeFiles\appCAN_Dashboard_qmllint_json
 
-build CMakeFiles/appCAN_Dashboard_qmllint_json | ${cmake_ninja_workdir}CMakeFiles/appCAN_Dashboard_qmllint_json: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/bin/qmllint.exe C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml .rcc/qmllint/appCAN_Dashboard_json.rsp || all_qmltyperegistrations appCAN_Dashboard_qmltyperegistration
+build CMakeFiles/appCAN_Dashboard_qmllint_json | ${cmake_ninja_workdir}CMakeFiles/appCAN_Dashboard_qmllint_json: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/bin/qmllint.exe C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoRPM.qml .rcc/qmllint/appCAN_Dashboard_json.rsp || all_qmltyperegistrations appCAN_Dashboard_qmltyperegistration
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\USER\Documents\CAN_Dashboard && C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.3/mingw_64/bin/qmllint.exe @C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmllint/appCAN_Dashboard_json.rsp"
 
 
 #############################################
 # Custom command for CMakeFiles\appCAN_Dashboard_qmllint_module
 
-build CMakeFiles/appCAN_Dashboard_qmllint_module | ${cmake_ninja_workdir}CMakeFiles/appCAN_Dashboard_qmllint_module: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/bin/qmllint.exe C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml .rcc/qmllint/appCAN_Dashboard_module.rsp || all_qmltyperegistrations appCAN_Dashboard_qmltyperegistration
+build CMakeFiles/appCAN_Dashboard_qmllint_module | ${cmake_ninja_workdir}CMakeFiles/appCAN_Dashboard_qmllint_module: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/bin/qmllint.exe C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoRPM.qml .rcc/qmllint/appCAN_Dashboard_module.rsp || all_qmltyperegistrations appCAN_Dashboard_qmltyperegistration
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\USER\Documents\CAN_Dashboard && C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.3/mingw_64/bin/qmllint.exe @C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmllint/appCAN_Dashboard_module.rsp"
 
 
@@ -408,7 +433,7 @@ build CMakeFiles/appCAN_Dashboard_copy_qml | ${cmake_ninja_workdir}CMakeFiles/ap
 #############################################
 # Custom command for .qt\appCAN_Dashboard_qml.txt
 
-build .qt/appCAN_Dashboard_qml.txt | ${cmake_ninja_workdir}.qt/appCAN_Dashboard_qml.txt: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml
+build .qt/appCAN_Dashboard_qml.txt | ${cmake_ninja_workdir}.qt/appCAN_Dashboard_qml.txt: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoRPM.qml
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -DFILES_INFO_PATH=C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/appCAN_Dashboard_qml.cmake -P C:/Qt/6.9.3/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake"
   DESC = Copying appCAN_Dashboard qml sources into build dir
   restat = 1
@@ -423,7 +448,7 @@ build CMakeFiles/appCAN_Dashboard_copy_res | ${cmake_ninja_workdir}CMakeFiles/ap
 #############################################
 # Custom command for .qt\appCAN_Dashboard_res.txt
 
-build .qt/appCAN_Dashboard_res.txt | ${cmake_ninja_workdir}.qt/appCAN_Dashboard_res.txt: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
+build .qt/appCAN_Dashboard_res.txt | ${cmake_ninja_workdir}.qt/appCAN_Dashboard_res.txt: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake C$:/Users/USER/Documents/CAN_Dashboard/asserts_resource.qrc
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -DFILES_INFO_PATH=C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/appCAN_Dashboard_res.cmake -P C:/Qt/6.9.3/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake"
   DESC = Copying appCAN_Dashboard qml resources into build dir
   restat = 1
@@ -438,7 +463,7 @@ build CMakeFiles/module_appCAN_Dashboard_aotstats_target | ${cmake_ninja_workdir
 #############################################
 # Custom command for .rcc\qmlcache\module_appCAN_Dashboard.aotstats
 
-build .rcc/qmlcache/module_appCAN_Dashboard.aotstats | ${cmake_ninja_workdir}.rcc/qmlcache/module_appCAN_Dashboard.aotstats: CUSTOM_COMMAND .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.aotstats .rcc/qmlcache/module_appCAN_Dashboard.aotstatslist || appCAN_Dashboard_qmltyperegistration
+build .rcc/qmlcache/module_appCAN_Dashboard.aotstats | ${cmake_ninja_workdir}.rcc/qmlcache/module_appCAN_Dashboard.aotstats: CUSTOM_COMMAND .rcc/qmlcache/appCAN_Dashboard_Main_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoTocDo_qml.cpp.aotstats .rcc/qmlcache/appCAN_Dashboard_DongHoRPM_qml.cpp.aotstats .rcc/qmlcache/module_appCAN_Dashboard.aotstatslist || appCAN_Dashboard_qmltyperegistration
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug && C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.3/mingw_64/bin/qmlaotstats.exe aggregate C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/module_appCAN_Dashboard.aotstatslist C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.rcc/qmlcache/module_appCAN_Dashboard.aotstats"
   DESC = Generating .rcc/qmlcache/module_appCAN_Dashboard.aotstats
   restat = 1
@@ -469,7 +494,7 @@ build CMakeFiles/appCAN_Dashboard_qmlimportscan | ${cmake_ninja_workdir}CMakeFil
 #############################################
 # Custom command for .qt\qml_imports\appCAN_Dashboard_build.cmake
 
-build .qt/qml_imports/appCAN_Dashboard_build.cmake | ${cmake_ninja_workdir}.qt/qml_imports/appCAN_Dashboard_build.cmake: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/bin/qmlimportscanner.exe .qt/rcc/qmake_CAN_Dashboard.qrc .qt/rcc/appCAN_Dashboard_raw_qml_0.qrc C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml
+build .qt/qml_imports/appCAN_Dashboard_build.cmake | ${cmake_ninja_workdir}.qt/qml_imports/appCAN_Dashboard_build.cmake: CUSTOM_COMMAND C$:/Qt/6.9.3/mingw_64/bin/qmlimportscanner.exe .qt/rcc/qmake_CAN_Dashboard.qrc .qt/rcc/appCAN_Dashboard_raw_qml_0.qrc C$:/Users/USER/Documents/CAN_Dashboard/Main.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoTocDo.qml C$:/Users/USER/Documents/CAN_Dashboard/DongHoRPM.qml
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\USER\Documents\CAN_Dashboard && C:\Users\USER\Documents\CAN_Dashboard\build\Desktop_Qt_6_9_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.9.3/mingw_64/bin/qmlimportscanner.exe @C:/Users/USER/Documents/CAN_Dashboard/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/.qt/qml_imports/appCAN_Dashboard_build.rsp"
   DESC = Running qmlimportscanner for appCAN_Dashboard
   restat = 1

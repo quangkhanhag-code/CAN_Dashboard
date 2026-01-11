@@ -3,5 +3,6 @@ typeinfo appCAN_Dashboard.qmltypes
 prefer :/qt/qml/CAN_Dashboard/
 Main 254.0 Main.qml
 DongHoTocDo 254.0 DongHoTocDo.qml
+DongHoRPM 254.0 DongHoRPM.qml
 depends QtQuick
 
