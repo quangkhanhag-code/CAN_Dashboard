@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/CAN_Dashboard">
-    <file alias="qmldir">C:/Project/CAN_Dashboard/build/Desktop_Qt_6_9_3_llvm_mingw_64_bit-Debug/CAN_Dashboard/qmldir</file>
-  </qresource>
-</RCC>
-
