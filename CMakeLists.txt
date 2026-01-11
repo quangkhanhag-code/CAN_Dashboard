@@ -23,6 +23,7 @@ qt_add_qml_module(appCAN_Dashboard
         RESOURCES
         RESOURCES asserts_resource.qrc
         RESOURCES
+        QML_FILES Icon.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
