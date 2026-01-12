@@ -7,20 +7,14 @@ Window {
     visible: true
     width: 900
     height: 500
-    color: "#000"
+    Image {
+        id: backgroundImage
+        anchors.fill: parent
+        source: "qrc:/image/assets/background.jpg"
+    }
 
     property real speed: keyArea.gialapspeed
     property real rpm: keyArea.gialaprpm
-    // property real temp: 70
-    // property real load: 0
-    // property real battery: 12.6
-    // property bool flag1: false
-    // property bool flag2: false
-    // FontLoader
-    // {
-    //     id: carfont
-    //     source: "qrc:/assets/font/Inter-VariableFont_opsz,wght.ttf"
-    // }
 
     RealTime
     {
@@ -37,7 +31,7 @@ Window {
         height: rectSpeed.width
         anchors.left: parent.left
         anchors.verticalCenter: parent.verticalCenter
-        color: "lightblue"
+        color: "transparent"
         DongHoTocDo
         {
             id: speedGause
@@ -45,6 +39,7 @@ Window {
             height: width
             anchors.verticalCenter: parent.verticalCenter
             speed: root.speed
+            iconSource: "qrc:/image/assets/purple.png"
         }
     }
     Rectangle
@@ -54,7 +49,7 @@ Window {
         height: rectDisplay.width
         anchors.left: rectSpeed.right
         anchors.verticalCenter: parent.verticalCenter
-        color: "darkblue"
+        color: "transparent"
     }
 
     Rectangle
@@ -64,6 +59,7 @@ Window {
         height: rectRpm.width
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
+        color: "transparent"
         DongHoRPM
         {
             id: rpmGause
@@ -71,6 +67,7 @@ Window {
             height: width
             anchors.verticalCenter: parent.verticalCenter
             rpm: root.rpm
+            iconSource: "qrc:/image/assets/purple.png"
         }
     }
     Rectangle
@@ -80,7 +77,7 @@ Window {
         anchors.top: parent.top
         width: parent.width/2
         x: (parent.width-width)/2
-        color: "orange"
+        color: "transparent"
     }
     Rectangle
     {
@@ -92,13 +89,11 @@ Window {
         Text {
             id: displayTimer
             text: realTime.datetime
-            width: parent.width
-            //wrapMode: Text.WorldWrap
-            //font.family: carfont.name
-            font.pixelSize: 25
+            font.pixelSize: 50
             color: "white"
             antialiasing: true
-            //renderType: Text.NativeRendering
+            anchors.centerIn: parent
+
         }
     }
 
@@ -109,7 +104,7 @@ Window {
         anchors.bottom: parent.bottom
         width: parent.width/2
         x: (parent.width-width)/2
-        color: "red"
+        color: "transparent"
     }
     Rectangle
     {
@@ -154,3 +149,4 @@ Window {
         }
     }
 }
+

@@ -27,7 +27,7 @@ Item {
         anchors.fill: parent
         radius: width/2
         color: speedColor
-        border.color: "#555"
+        border.color: "transparent"
     }
     Item {
         id: centerPoint
@@ -45,7 +45,7 @@ Item {
 
             width: major ? parent.width * 0.01 : parent.width * 0.005
             height: major ? parent.height * 0.1 : parent.height * 0.05
-            color: "white"
+            color: "lightblue"
             x: cx - width/2
             y: cy - m_radius
             antialiasing: true
@@ -65,7 +65,7 @@ Item {
             property int value : index * root.vachchialon
             font.pixelSize: root.size * 0.06
             font.bold: true
-            color: "white"
+            color: "lightblue"
             text: value.toString()
             property real deg_angle: (root.startAngle + (value / root.maxSpeed) * root.sweepAngle)
             property real rad_angle: (deg_angle-90) * Math.PI / 180
@@ -100,11 +100,11 @@ Item {
         id: speedIcon
         source: iconSource
         anchors.centerIn: parent
-        anchors.verticalCenter: parent.verticalCenter
-        width: parent.width * 0.3
-        height: speedIcon.width
+        width: parent.width*1.15
+        height: parent.height*1.15
         fillMode: Image.PreserveAspectFit
         antialiasing: true
+        opacity: 0.5
     }
     Text {
         anchors.centerIn: parent

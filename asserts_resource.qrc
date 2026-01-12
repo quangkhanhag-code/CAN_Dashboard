@@ -1,5 +1,10 @@
 <RCC>
-    <qresource prefix="/">
-        <file>assets/font/Inter-VariableFont_opsz,wght.ttf</file>
+    <qresource prefix="/"/>
+    <qresource prefix="/resource"/>
+    <qresource prefix="/image">
+        <file>assets/circle_ring.png</file>
+        <file>assets/techno.png</file>
+        <file>assets/purple.png</file>
+        <file>assets/background.jpg</file>
     </qresource>
 </RCC>

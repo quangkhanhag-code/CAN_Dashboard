@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(CAN_Dashboard VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick)
 find_package(Qt6 REQUIRED COMPONENTS Core)
@@ -20,11 +21,10 @@ qt_add_qml_module(appCAN_Dashboard
         QML_FILES DongHoTocDo.qml
         QML_FILES DongHoRPM.qml
         SOURCES realtime.h realtime.cpp
-        RESOURCES
         RESOURCES asserts_resource.qrc
-        RESOURCES
         QML_FILES Icon.qml
         RESOURCES .gitignore
+
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

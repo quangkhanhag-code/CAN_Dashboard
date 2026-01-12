@@ -27,7 +27,7 @@ Item {
         anchors.fill: parent
         radius: width/2
         color: speedColor
-        border.color: "#555"
+        border.color: "transparent"
     }
     Item {
         id: centerPoint
@@ -100,10 +100,11 @@ Item {
         source: iconSource
         anchors.centerIn: parent
         anchors.verticalCenter: parent.verticalCenter
-        width: parent.width * 0.3
-        height: rpmIcon.width
+        width: parent.width * 1.15
+        height: parent.height *1.15
         fillMode: Image.PreserveAspectFit
         antialiasing: true
+        opacity: 0.5
     }
     Text {
         anchors.centerIn: parent
