@@ -110,7 +110,7 @@ Item {
         anchors.centerIn: parent
         y: 60
         text: Math.round(root.speed) + " km/h"
-        color: "white"
+        color: "gray"
         font.pixelSize: 22
     }
 }

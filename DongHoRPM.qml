@@ -109,8 +109,8 @@ Item {
     Text {
         anchors.centerIn: parent
         y: 60
-        text: Math.round(root.rpm) + " vong/phut"
-        color: "white"
+        text: Math.round(root.rpm) + "r/min"
+        color: "gray"
         font.pixelSize: 22
     }
 }

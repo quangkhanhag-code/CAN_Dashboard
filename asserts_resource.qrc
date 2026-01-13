@@ -6,5 +6,16 @@
         <file>assets/techno.png</file>
         <file>assets/purple.png</file>
         <file>assets/background.jpg</file>
+        <file>assets/engine.png</file>
+        <file>assets/abs.png</file>
+        <file>assets/airbag.jpg</file>
+        <file>assets/battery.jpg</file>
+        <file>assets/brake.png</file>
+        <file>assets/oilpressure.jpg</file>
+        <file>assets/temp.png</file>
+        <file>assets/Carbackview.png</file>
+        <file>assets/Carbackview2.png</file>
+        <file>assets/device_thermostat_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</file>
+        <file>assets/local_gas_station_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</file>
     </qresource>
 </RCC>

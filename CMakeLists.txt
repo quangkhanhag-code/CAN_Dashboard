@@ -24,6 +24,7 @@ qt_add_qml_module(appCAN_Dashboard
         RESOURCES asserts_resource.qrc
         QML_FILES Icon.qml
         RESOURCES .gitignore
+        QML_FILES MyProgressBar.qml
 
 )
 
