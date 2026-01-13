@@ -143,7 +143,7 @@ Window {
                 Layout.preferredHeight: 40
                 Image {
                     id: battery
-                    source: "qrc:/image/assets/battery.jpg"
+                    source: "qrc:/image/assets/battery1.png"
                     width: 32
                     height: 32
                     anchors.centerIn: parent
@@ -156,7 +156,7 @@ Window {
                 Layout.preferredHeight: 40
                 Image {
                     id: oil
-                    source: "qrc:/image/assets/oilpressure.jpg"
+                    source: "qrc:/image/assets/oilpressure1.png"
                     width: 32
                     height: 32
                     anchors.centerIn: parent
@@ -169,7 +169,7 @@ Window {
                 Layout.preferredHeight: 40
                 Image {
                     id: abs
-                    source: "qrc:/image/assets/abs.png"
+                    source: "qrc:/image/assets/abs1.png"
                     width: 32
                     height: 32
                     anchors.centerIn: parent
@@ -182,7 +182,7 @@ Window {
                 Layout.preferredHeight: 40
                 Image {
                     id: airbag
-                    source: "qrc:/image/assets/airbag.jpg"
+                    source: "qrc:/image/assets/airbag1.png"
                     width: 32
                     height: 32
                     anchors.centerIn: parent
@@ -195,9 +195,9 @@ Window {
                 Layout.preferredHeight: 40
                 Image {
                     id: brake
-                    source: "qrc:/image/assets/brake.png"
-                    width: 50
-                    height: 50
+                    source: "qrc:/image/assets/brake-system-warning.png"
+                    width: 32
+                    height: 32
                     anchors.centerIn: parent
                     fillMode: Image.PreserveAspectFit
                     visible: num5
@@ -221,7 +221,7 @@ Window {
                 Layout.preferredHeight: 40
                 Image {
                     id: temperature
-                    source: "qrc:/image/assets/abs.png"
+                    source: "qrc:/image/assets/temp.png"
                     width: 32
                     height: 32
                     anchors.centerIn: parent
