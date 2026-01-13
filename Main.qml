@@ -12,7 +12,7 @@ Window {
     Image {
         id: backgroundImage
         anchors.fill: parent
-        source: "qrc:/image/assets/background.jpg"
+        source: "qrc:/image/assets/backgroundTest.jpg"
     }
 
     property real speed: keyArea.gialapspeed

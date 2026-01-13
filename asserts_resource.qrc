@@ -16,5 +16,6 @@
         <file>assets/oilpressure1.png</file>
         <file>assets/brake-system-warning.png</file>
         <file>assets/temp.png</file>
+        <file>assets/backgroundTest.jpg</file>
     </qresource>
 </RCC>

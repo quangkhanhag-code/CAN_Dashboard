@@ -17,7 +17,7 @@ Item {
             radius: radiusprogress
             Behavior on width {
                 NumberAnimation {
-                    duration: 1000
+                    duration: 300
                     easing.type: Easing.Linear
                 }
             }
