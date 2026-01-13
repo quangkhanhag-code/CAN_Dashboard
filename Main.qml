@@ -69,10 +69,10 @@ Window {
             width: parent.width
             Image {
                 id: carBackView
-                source: "qrc:/image/assets/Carbackview2.png"
+                source: "qrc:/image/assets/carback.png"
                 anchors.centerIn: parent
-                width: parent.width
-                height: parent.height
+                width: parent.width*1.1
+                height: parent.height*1.1
                 fillMode: Image.PreserveAspectFit
             }
         }

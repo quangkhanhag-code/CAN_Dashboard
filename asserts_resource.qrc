@@ -2,11 +2,8 @@
     <qresource prefix="/"/>
     <qresource prefix="/resource"/>
     <qresource prefix="/image">
-        <file>assets/circle_ring.png</file>
-        <file>assets/techno.png</file>
         <file>assets/purple.png</file>
         <file>assets/background.jpg</file>
-        <file>assets/Carbackview2.png</file>
         <file>assets/device_thermostat_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</file>
         <file>assets/local_gas_station_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</file>
         <file>assets/abs1.png</file>
@@ -17,5 +14,6 @@
         <file>assets/brake-system-warning.png</file>
         <file>assets/temp.png</file>
         <file>assets/backgroundTest.jpg</file>
+        <file>assets/carback.png</file>
     </qresource>
 </RCC>
