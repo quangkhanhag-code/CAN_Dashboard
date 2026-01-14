@@ -9,14 +9,16 @@ Window {
     visible: true
     width: 900
     height: 500
+    ////////BACK GROUND////////
     Image {
         id: backgroundImage
         anchors.fill: parent
         source: "qrc:/image/assets/backgroundTest.jpg"
     }
-
-    property real speed: keyArea.gialapspeed
-    property real rpm: keyArea.gialaprpm
+    ////////////////////////////////
+    /////PROPERTY//////////////////////
+    property real speed: cluster.speed
+    property real rpm: cluster.rpm
     property bool num1: false
     property bool num2: false
     property bool num3: false
@@ -24,10 +26,16 @@ Window {
     property bool num5: false
     property bool num6: false
     property bool num7: false
-    property real progressFuel: 0
-    property real progressTemp: 0
-    property string mode: "normal"
-
+    property real progressFuel: 0.6
+    property real progressTemp: cluster.coolant
+    property int stateIndex: 0
+    property var states: ["normal","error", "chart"]
+    function updateState() {
+        root.mode = root.states[root.stateIndex]
+    }
+    property string mode: root.states[0]
+    //////////////////////////////////////
+    ////////// CHẠY THỜI GIAN THỰC //////////
     RealTime
     {
         id: realTime
@@ -35,7 +43,8 @@ Window {
             startTimer()
         }
     }
-
+    /////////////////////////////////////////////////////////
+    //// HIỂN THỊ ĐỒNG HỒ TỐC ĐỘ
     Rectangle
     {
         id: rectSpeed
@@ -55,6 +64,9 @@ Window {
             iconSource: "qrc:/image/assets/purple.png"
         }
     }
+    ///////////////////////////////////////////////////////////////
+    //// HIỂN THỊ VÙNG MÀN HÌNH ////
+    ////MÀN HÌNH CHUYỂN ĐỔI GIỮA 3 STATE//////////////
     Rectangle
     {
         id:rectDisplay
@@ -85,59 +97,12 @@ Window {
         {
             id: errorState
             anchors.fill: parent
-            source: "ERROR.qml"
+            source: "CAN.qml"
             active: mode === "error"
         }
-
-        // Item {
-        //     id: displayArea
-        //     anchors.bottom: parent.bottom
-        //     height: parent.height*0.8
-        //     width: parent.width
-        //     property string mode : "normal"
-
-        //
-        //     Image {
-        //         id: carBackView
-        //         source: "qrc:/image/assets/carback.png"
-        //         anchors.centerIn: parent
-        //         width: parent.width*1.1
-        //         height: parent.height*1.1
-        //         fillMode: Image.PreserveAspectFit
-        //     }
-        // }
-        // Text {
-        //     id: textSpeed
-        //     anchors.horizontalCenter: parent.horizontalCenter
-        //     anchors.top: parent.top
-        //     anchors.bottom: displayArea.top
-        //     anchors.bottomMargin: 10
-        //     font.pixelSize: 60
-        //     color: "white"
-        //     font.bold: true
-        //     text: Math.round(root.speed).toString()
-        // }
-        // Text {
-        //     id: textUnit
-        //     text: "km/h"
-        //     anchors.bottom: textSpeed.top
-        //     anchors.horizontalCenter: parent.horizontalCenter
-        //     font.pixelSize: 20
-        //     color: "gray"
-        //     font.italic: true
-        // }
-        // Text {
-        //     id: displayTimer
-        //     text: realTime.datetime
-        //     font.pixelSize: 40
-        //     font.family: "Digital-7"
-        //     color: "white"
-        //     antialiasing: true
-        //     anchors.top: displayArea.bottom
-        //     anchors.horizontalCenter: parent.horizontalCenter
-        // }
     }
-
+    ///////////////////////////////////////////////////////////
+    ///////// HIỂN THỊ ĐỒNG TỐC TỐC ĐỘ ĐỘNG CƠ /////////////
     Rectangle
     {
         id: rectRpm
@@ -157,6 +122,8 @@ Window {
             iconSource: "qrc:/image/assets/purple.png"
         }
     }
+    //////////////////////////////////////////////////
+    ///////////// HIỂN THỊ CÁC BIỂU TƯỢNG CẢNH BÁO /////////////
     Rectangle
     {
         id: rectDiag
@@ -262,6 +229,8 @@ Window {
             }
         }
     }
+    //////////////////////////////////////////////////////////////////
+    ////////// HIỂN THỊ MỨC XĂNG////////////////////////////////
     Rectangle
     {
         id: rectFuel
@@ -279,6 +248,7 @@ Window {
             height: 32
             width: parent.width
             radiusprogress: height/2
+            colorprogress: progressFuel < 0.2 ? "red" : "green"
             progress: progressFuel
         }
         Image {
@@ -290,6 +260,8 @@ Window {
             fillMode: Image.PreserveAspectFit
         }
     }
+    ////////////////////////////////////////////////////////
+    /////////HIỂN THỊ NHIỆT ĐỘ ĐỘNG CƠ//////////////////
     Rectangle
     {
         id: rectTemp
@@ -308,6 +280,7 @@ Window {
             height: 32
             width: parent.width
             radiusprogress: height/2
+            colorprogress: progressTemp < 0.7 ? "green" : "red"
             progress: progressTemp
         }
         Image {
@@ -319,24 +292,7 @@ Window {
             fillMode: Image.PreserveAspectFit
         }
     }
-    // Rectangle
-    // {
-    //     id: realTimeDisplay
-    //     anchors.top: rectDisplay.bottom
-    //     anchors.bottom: rectButton.top
-    //     width: rectDisplay.width
-    //     height: rectDisplay.height
-    //     color: "transparent"
-    //     Text {
-    //         id: displayTimer
-    //         text: realTime.datetime
-    //         font.pixelSize: 40
-    //         color: "white"
-    //         antialiasing: true
-    //         anchors.centerIn: parent
-    //     }
-    // }
-
+    ////////CÁC ICON BÁO STATE HIỆN TẠI Ở MÀN HÌNH/////////
     Rectangle
     {
         id: rectButton
@@ -381,24 +337,25 @@ Window {
             }
         }
     }
+    ////////////////////////////////////////////////////////////////////
+    /////////////VÙNG ĐIỀU KHIỂN GIẢ LẬP////////////////////
     Rectangle
     {
         id: keyArea
         anchors.fill: parent
         color: "transparent"
         focus: true
-        property real throttle: 0
-        property real gialapspeed: 0
-        property real gialaprpm: 0
-        property real tisotruyenCVT: 2 //Tỉ số truyền biến thiên giả lập
         Component.onCompleted:
         {
-            gialaprpm: 500 //500 = chế độ không tải
+            keyArea.forceActiveFocus()
         }
 
         Keys.onPressed: (event)=> {
-                            if (event.key === Qt.Key_Up) throttle =1
-                            if (event.key === Qt.Key_Down) throttle =0
+                            if (event.isAutoRepeat) return
+                            if (event.key === Qt.Key_Up) ecuCmd.throttleOn()
+                            if (event.key === Qt.Key_Down) ecuCmd.throttleOff()
+                            if (event.key === Qt.Key_Left)  ecuCmd.brakeOn()
+                            if (event.key === Qt.Key_Right) ecuCmd.brakeOff()
                             if (event.key === Qt.Key_1) num1 = !num1
                             if (event.key === Qt.Key_2) num2 = !num2
                             if (event.key === Qt.Key_3) num3 = !num3
@@ -406,53 +363,35 @@ Window {
                             if (event.key === Qt.Key_5) num5 = !num5
                             if (event.key === Qt.Key_6) num6 = !num6
                             if (event.key === Qt.Key_7) num7 = !num7
-                            if (event.key === Qt.Key_W) {
-                                progressFuel += 0.1
-                                if (progressFuel > 1) progressFuel = 1
-                            }
-                            if (event.key === Qt.Key_S) {
-                                progressFuel -= 0.1
-                                if (progressFuel <0) progressFuel = 0
-                            }
+                            // if (event.key === Qt.Key_W) {
+                            //     progressFuel += 0.1
+                            //     if (progressFuel > 1) progressFuel = 1
+                            // }
+                            // if (event.key === Qt.Key_S) {
+                            //     progressFuel -= 0.1
+                            //     if (progressFuel <0) progressFuel = 0
+                            // }
+                            // if (event.key === Qt.Key_D) {
+                            //     progressTemp += 0.1
+                            //     if (progressTemp > 1) progressTemp = 1
+                            // }
+                            // if (event.key === Qt.Key_A) {
+                            //     progressTemp -= 0.1
+                            //     if (progressTemp < 0) progressTemp = 0
+                            // }
                             if (event.key === Qt.Key_D) {
-                                progressTemp += 0.1
-                                if (progressTemp > 1) progressTemp = 1
+                                root.stateIndex++
+                                if (stateIndex > 2)
+                                root.stateIndex = 0
+                                root.updateState()
                             }
                             if (event.key === Qt.Key_A) {
-                                progressTemp -= 0.1
-                                if (progressTemp < 0) progressTemp = 0
+                                root.stateIndex--
+                                if (stateIndex < 0)
+                                root.stateIndex = 2
+                                root.updateState()
                             }
-                            if (event.key === Qt.Key_N) mode = "normal"
-                            if (event.key === Qt.Key_C) mode = "chart"
-                            if (event.key === Qt.Key_E) mode = "error"
                         }
-        Timer
-        {
-            interval: 16
-            running: true
-            repeat: true
-            onTriggered: {
-                // Gia toc
-                let engineForce = keyArea.throttle * 400
-                let drag = keyArea.gialapspeed * 3
-                let accel = (engineForce - drag) * 0.002
-                keyArea.gialapspeed += accel
-                if (keyArea.gialapspeed < 0) keyArea.gialapspeed = 0
-                // Chuyen so CVT gialap
-                let targetRPM
-
-                if (keyArea.gialapspeed < 30)
-                    targetRPM = 500 + speed * 20
-                else if (keyArea.gialapspeed < 80)
-                    targetRPM = 1200
-                else
-                    targetRPM = 1200 + (keyArea.gialapspeed - 80) * 15
-                // Lam tron gia lap RPM
-                keyArea.gialaprpm += (targetRPM - keyArea.gialaprpm) * 0.05
-                //CVT tu doi ti so truyen
-                keyArea.tisotruyenCVT = keyArea.gialaprpm / (keyArea.gialapspeed + 1)
-            }
-        }
     }
 }
 
