@@ -5,7 +5,7 @@ project(CAN_Dashboard VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Quick Charts)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
@@ -50,7 +50,7 @@ set_target_properties(appCAN_Dashboard PROPERTIES
 )
 
 target_link_libraries(appCAN_Dashboard
-    PRIVATE Qt6::Quick
+    PRIVATE Qt6::Quick Qt6::Charts
 )
 target_link_libraries(appCAN_Dashboard PRIVATE Qt6::Core)
 target_link_libraries(appCAN_Dashboard PRIVATE Qt6::Core)
