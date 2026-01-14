@@ -29,7 +29,7 @@ Window {
     property real progressFuel: 0.6
     property real progressTemp: cluster.coolant
     property int stateIndex: 0
-    property var states: ["normal","error", "chart"]
+    property var states: ["normal","can", "chart"]
     function updateState() {
         root.mode = root.states[root.stateIndex]
     }
@@ -95,10 +95,10 @@ Window {
         }
         Loader
         {
-            id: errorState
+            id: canState
             anchors.fill: parent
             source: "CAN.qml"
-            active: mode === "error"
+            active: mode === "can"
         }
     }
     ///////////////////////////////////////////////////////////
@@ -281,7 +281,7 @@ Window {
             width: parent.width
             radiusprogress: height/2
             colorprogress: progressTemp < 0.7 ? "green" : "red"
-            progress: progressTemp
+            progress: progressTemp/100
         }
         Image {
             id: tempImage
@@ -327,10 +327,10 @@ Window {
             }
             Mybutton
             {
-                id:btnError
+                id:btnCan
                 Layout.fillWidth: true
                 Layout.preferredHeight: 40
-                buttonColor: mode === "error" ? "red" : "lightgray"
+                buttonColor: mode === "can" ? "red" : "lightgray"
                 btnradius: 20
                 iconSource: "qrc:/image/assets/error.png"
 
