@@ -22,9 +22,13 @@ qt_add_qml_module(appCAN_Dashboard
         QML_FILES DongHoRPM.qml
         SOURCES realtime.h realtime.cpp
         RESOURCES asserts_resource.qrc
-        QML_FILES Icon.qml
+        QML_FILES
         RESOURCES .gitignore
         QML_FILES MyProgressBar.qml
+        QML_FILES CarBackView.qml
+        QML_FILES ERROR.qml
+        QML_FILES Chart.qml
+        QML_FILES Mybutton.qml
 
 )
 

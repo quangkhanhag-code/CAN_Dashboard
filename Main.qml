@@ -26,6 +26,7 @@ Window {
     property bool num7: false
     property real progressFuel: 0
     property real progressTemp: 0
+    property string mode: "normal"
 
     RealTime
     {
@@ -62,49 +63,79 @@ Window {
         anchors.right: rectRpm.left
         anchors.verticalCenter: parent.verticalCenter
         color: "transparent"
-        Item {
-            id: displayArea
-            anchors.bottom: parent.bottom
-            height: parent.height*0.8
-            width: parent.width
-            Image {
-                id: carBackView
-                source: "qrc:/image/assets/carback.png"
-                anchors.centerIn: parent
-                width: parent.width*1.1
-                height: parent.height*1.1
-                fillMode: Image.PreserveAspectFit
+        Loader
+        {
+            id: normalState
+            anchors.fill: parent
+            source: "CarBackView.qml"
+            active: mode === "normal"
+            onLoaded:
+            {
+                normalState.item.speed = root.speed
             }
         }
-        Text {
-            id: textSpeed
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: parent.top
-            anchors.bottom: displayArea.top
-            anchors.bottomMargin: 10
-            font.pixelSize: 60
-            color: "white"
-            font.bold: true
-            text: Math.round(root.speed).toString()
+        Loader
+        {
+            id: chartState
+            anchors.fill: parent
+            source: "Chart.qml"
+            active: mode === "chart"
         }
-        Text {
-            id: textUnit
-            text: "km/h"
-            anchors.bottom: textSpeed.top
-            anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: 20
-            color: "gray"
-            font.italic: true
+        Loader
+        {
+            id: errorState
+            anchors.fill: parent
+            source: "ERROR.qml"
+            active: mode === "error"
         }
-        Text {
-            id: displayTimer
-            text: realTime.datetime
-            font.pixelSize: 40
-            color: "white"
-            antialiasing: true
-            anchors.top: displayArea.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
-        }
+
+        // Item {
+        //     id: displayArea
+        //     anchors.bottom: parent.bottom
+        //     height: parent.height*0.8
+        //     width: parent.width
+        //     property string mode : "normal"
+
+        //
+        //     Image {
+        //         id: carBackView
+        //         source: "qrc:/image/assets/carback.png"
+        //         anchors.centerIn: parent
+        //         width: parent.width*1.1
+        //         height: parent.height*1.1
+        //         fillMode: Image.PreserveAspectFit
+        //     }
+        // }
+        // Text {
+        //     id: textSpeed
+        //     anchors.horizontalCenter: parent.horizontalCenter
+        //     anchors.top: parent.top
+        //     anchors.bottom: displayArea.top
+        //     anchors.bottomMargin: 10
+        //     font.pixelSize: 60
+        //     color: "white"
+        //     font.bold: true
+        //     text: Math.round(root.speed).toString()
+        // }
+        // Text {
+        //     id: textUnit
+        //     text: "km/h"
+        //     anchors.bottom: textSpeed.top
+        //     anchors.horizontalCenter: parent.horizontalCenter
+        //     font.pixelSize: 20
+        //     color: "gray"
+        //     font.italic: true
+        // }
+        // Text {
+        //     id: displayTimer
+        //     text: realTime.datetime
+        //     font.pixelSize: 40
+        //     font.family: "Digital-7"
+        //     color: "white"
+        //     antialiasing: true
+        //     anchors.top: displayArea.bottom
+        //     anchors.horizontalCenter: parent.horizontalCenter
+        // }
     }
 
     Rectangle
@@ -311,9 +342,44 @@ Window {
         id: rectButton
         anchors.top: rectDisplay.bottom
         anchors.bottom: parent.bottom
-        width: parent.width/2
-        x: (parent.width-width)/2
+        anchors.left: rectFuel.right
+        anchors.right: rectTemp.left
+        anchors.margins: 20
         color: "transparent"
+        RowLayout
+        {
+            anchors.fill: parent
+            spacing: 20
+            Mybutton
+            {
+                id:btnChart
+                Layout.fillWidth: true
+                Layout.preferredHeight: 40
+                buttonColor: mode === "chart" ? "red" : "lightgray"
+                btnradius: 20
+                iconSource: "qrc:/image/assets/chart.png"
+            }
+            Mybutton
+            {
+                id:btnNormal
+                Layout.fillWidth: true
+                Layout.preferredHeight: 40
+                buttonColor: mode === "normal" ? "red" : "lightgray"
+                btnradius: 20
+                iconSource: "qrc:/image/assets/nornal.png"
+
+            }
+            Mybutton
+            {
+                id:btnError
+                Layout.fillWidth: true
+                Layout.preferredHeight: 40
+                buttonColor: mode === "error" ? "red" : "lightgray"
+                btnradius: 20
+                iconSource: "qrc:/image/assets/error.png"
+
+            }
+        }
     }
     Rectangle
     {
@@ -356,6 +422,9 @@ Window {
                                 progressTemp -= 0.1
                                 if (progressTemp < 0) progressTemp = 0
                             }
+                            if (event.key === Qt.Key_N) mode = "normal"
+                            if (event.key === Qt.Key_C) mode = "chart"
+                            if (event.key === Qt.Key_E) mode = "error"
                         }
         Timer
         {

@@ -1,6 +1,8 @@
 <RCC>
     <qresource prefix="/"/>
-    <qresource prefix="/resource"/>
+    <qresource prefix="/resource">
+        <file>assets/font/digital-7.ttf</file>
+    </qresource>
     <qresource prefix="/image">
         <file>assets/purple.png</file>
         <file>assets/background.jpg</file>
@@ -15,5 +17,8 @@
         <file>assets/temp.png</file>
         <file>assets/backgroundTest.jpg</file>
         <file>assets/carback.png</file>
+        <file>assets/chart.png</file>
+        <file>assets/error.png</file>
+        <file>assets/nornal.png</file>
     </qresource>
 </RCC>
