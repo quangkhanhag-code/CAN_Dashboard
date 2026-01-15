@@ -17,8 +17,8 @@ Window {
     }
     ////////////////////////////////
     /////PROPERTY//////////////////////
-    property real speed: cluster.speed
-    property real rpm: cluster.rpm
+    property int speed: cluster.speed
+    property int rpm: cluster.rpm
     property bool num1: false
     property bool num2: false
     property bool num3: false
@@ -27,7 +27,7 @@ Window {
     property bool num6: false
     property bool num7: false
     property real progressFuel: 0.6
-    property real progressTemp: cluster.coolant
+    property int progressTemp: cluster.coolant
     property int stateIndex: 0
     property var states: ["normal","can", "chart"]
     function updateState() {
