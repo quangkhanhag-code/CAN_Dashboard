@@ -30,7 +30,7 @@ qt_add_qml_module(appCAN_Dashboard
         QML_FILES MyProgressBar.qml
         QML_FILES CarBackView.qml
         QML_FILES CAN.qml
-        QML_FILES Chart.qml
+        QML_FILES
         QML_FILES Mybutton.qml
         SOURCES cantransport.h cantransport.cpp
         SOURCES clustercontroller.h clustercontroller.cpp

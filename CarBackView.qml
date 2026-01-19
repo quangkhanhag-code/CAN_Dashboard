@@ -4,7 +4,7 @@ Item {
     id: root
     width: parent ? parent.width : 800
     height: parent ? parent.height : 480
-    property real speed: 0
+    property real speed: cluster.speed
 
     Rectangle
     {

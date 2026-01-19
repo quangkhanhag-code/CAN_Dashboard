@@ -27,13 +27,13 @@ Window {
     property bool num6: false
     property bool num7: false
     property real progressFuel: 0.6
-    property real progressTemp: cluster.coolant
+    property real progressTemp: 0.5
     property int stateIndex: 0
     property var states: ["normal","can", "chart"]
     function updateState() {
         root.mode = root.states[root.stateIndex]
     }
-    property string mode: root.states[0]
+    property string mode: "normal"
     //////////////////////////////////////
     ////////// CHẠY THỜI GIAN THỰC //////////
     RealTime
@@ -75,31 +75,35 @@ Window {
         anchors.right: rectRpm.left
         anchors.verticalCenter: parent.verticalCenter
         color: "transparent"
+        //property string mode: "normal"
+
         Loader
-        {
-            id: normalState
-            anchors.fill: parent
-            source: "CarBackView.qml"
-            active: mode === "normal"
-            onLoaded:
-            {
-                normalState.item.speed = root.speed
-            }
-        }
-        Loader
-        {
-            id: chartState
-            anchors.fill: parent
-            source: "Chart.qml"
-            active: mode === "chart"
-        }
-        Loader
-        {
-            id: canState
-            anchors.fill: parent
-            source: "CAN.qml"
-            active: mode === "can"
-        }
+                {
+                    id: normalState
+                    anchors.fill: parent
+                    source: "CarBackView.qml"
+                    active: mode === "normal"
+                    // onLoaded:
+                    // {
+                    //     normalState.item.speed = Qt.biding(function(){
+                    //     root.s
+                    // }
+                }
+                // Loader
+                // {
+                //     id: chartState
+                //     anchors.fill: parent
+                //     source: "Chart.qml"
+                //     active: mode === "chart"
+                // }
+                Loader
+                {
+                    id: canState
+                    anchors.fill: parent
+                    source: "CAN.qml"
+                    active: mode === "can"
+                }
+
     }
     ///////////////////////////////////////////////////////////
     ///////// HIỂN THỊ ĐỒNG TỐC TỐC ĐỘ ĐỘNG CƠ /////////////
@@ -280,8 +284,8 @@ Window {
             height: 32
             width: parent.width
             radiusprogress: height/2
-            colorprogress: progressTemp < 0.7 ? "green" : "red"
-            progress: progressTemp/100
+            colorprogress: root.coolant > 100 ? "red" : "green"
+            progress: root.progressTemp
         }
         Image {
             id: tempImage
@@ -294,49 +298,49 @@ Window {
     }
     ////////CÁC ICON BÁO STATE HIỆN TẠI Ở MÀN HÌNH/////////
     Rectangle
-    {
-        id: rectButton
-        anchors.top: rectDisplay.bottom
-        anchors.bottom: parent.bottom
-        anchors.left: rectFuel.right
-        anchors.right: rectTemp.left
-        anchors.margins: 20
-        color: "transparent"
-        RowLayout
         {
-            anchors.fill: parent
-            spacing: 20
-            Mybutton
+            id: rectButton
+            anchors.top: rectDisplay.bottom
+            anchors.bottom: parent.bottom
+            anchors.left: rectFuel.right
+            anchors.right: rectTemp.left
+            anchors.margins: 20
+            color: "transparent"
+            RowLayout
             {
-                id:btnChart
-                Layout.fillWidth: true
-                Layout.preferredHeight: 40
-                buttonColor: mode === "chart" ? "red" : "lightgray"
-                btnradius: 20
-                iconSource: "qrc:/image/assets/chart.png"
-            }
-            Mybutton
-            {
-                id:btnNormal
-                Layout.fillWidth: true
-                Layout.preferredHeight: 40
-                buttonColor: mode === "normal" ? "red" : "lightgray"
-                btnradius: 20
-                iconSource: "qrc:/image/assets/nornal.png"
+                anchors.fill: parent
+                spacing: 20
+                Mybutton
+                {
+                    id:btnChart
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 40
+                    buttonColor: mode === "chart" ? "red" : "lightgray"
+                    btnradius: 20
+                    iconSource: "qrc:/image/assets/chart.png"
+                }
+                Mybutton
+                {
+                    id:btnNormal
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 40
+                    buttonColor: mode === "normal" ? "red" : "lightgray"
+                    btnradius: 20
+                    iconSource: "qrc:/image/assets/nornal.png"
 
-            }
-            Mybutton
-            {
-                id:btnCan
-                Layout.fillWidth: true
-                Layout.preferredHeight: 40
-                buttonColor: mode === "can" ? "red" : "lightgray"
-                btnradius: 20
-                iconSource: "qrc:/image/assets/error.png"
+                }
+                Mybutton
+                {
+                    id:btnCan
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 40
+                    buttonColor: mode === "can" ? "red" : "lightgray"
+                    btnradius: 20
+                    iconSource: "qrc:/image/assets/error.png"
 
+                }
             }
         }
-    }
     ////////////////////////////////////////////////////////////////////
     /////////////VÙNG ĐIỀU KHIỂN GIẢ LẬP////////////////////
     Rectangle
@@ -351,7 +355,7 @@ Window {
         }
 
         Keys.onPressed: (event)=> {
-                            if (event.isAutoRepeat) return
+                            //if (event.isAutoRepeat) return
                             if (event.key === Qt.Key_Up) ecuCmd.throttleOn()
                             if (event.key === Qt.Key_Down) ecuCmd.throttleOff()
                             if (event.key === Qt.Key_Left)  ecuCmd.brakeOn()
