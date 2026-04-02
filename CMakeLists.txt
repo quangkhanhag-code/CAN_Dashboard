@@ -5,7 +5,9 @@ project(CAN_Dashboard VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick Charts)
+find_package(Qt6 REQUIRED COMPONENTS Quick Charts SerialPort)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
@@ -30,11 +32,9 @@ qt_add_qml_module(appCAN_Dashboard
         QML_FILES MyProgressBar.qml
         QML_FILES CarBackView.qml
         QML_FILES CAN.qml
-        QML_FILES Chart.qml
+        QML_FILES
         QML_FILES Mybutton.qml
-        SOURCES cantransport.h cantransport.cpp
-        SOURCES clustercontroller.h clustercontroller.cpp
-        SOURCES ecucommandclient.h ecucommandclient.cpp
+        SOURCES serialreader.h serialreader.cpp
 
 )
 
@@ -50,8 +50,10 @@ set_target_properties(appCAN_Dashboard PROPERTIES
 )
 
 target_link_libraries(appCAN_Dashboard
-    PRIVATE Qt6::Quick Qt6::Charts
+    PRIVATE Qt6::Quick Qt6::Charts Qt6::SerialPort
 )
+target_link_libraries(appCAN_Dashboard PRIVATE Qt6::Core)
+target_link_libraries(appCAN_Dashboard PRIVATE Qt6::Core)
 target_link_libraries(appCAN_Dashboard PRIVATE Qt6::Core)
 target_link_libraries(appCAN_Dashboard PRIVATE Qt6::Core)
 target_link_libraries(appCAN_Dashboard PRIVATE Qt6::Core)

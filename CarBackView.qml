@@ -4,8 +4,11 @@ Item {
     id: root
     width: parent ? parent.width : 800
     height: parent ? parent.height : 480
-    property real speed: 0
-
+    property real speed: serial.speed
+    FontLoader {
+            id: digitalFont
+            source: "qrc:/resource/assets/font/digital-7.ttf"
+        }
     Rectangle
     {
         anchors.fill:parent
@@ -48,7 +51,7 @@ Item {
             id: displayTimer
             text: realTime.datetime
             font.pixelSize: 40
-            font.family: "Digital-7"
+            font.family: digitalFont.name
             color: "white"
             antialiasing: true
             anchors.top: displayArea.bottom

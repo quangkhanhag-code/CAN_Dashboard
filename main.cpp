@@ -1,22 +1,16 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-
 #include "realtime.h"
-#include "clustercontroller.h"
-#include "ecucommandclient.h"
-
+#include "serialreader.h"
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
     qmlRegisterType<RealTime>("RealTimeLib", 1, 0, "RealTime");
-
-    ClusterController cluster;
-    EcuCommandClient ecuCmd;
+    serialReader serial;
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextProperty("cluster", &cluster);
-    engine.rootContext()->setContextProperty("ecuCmd", &ecuCmd);
+    engine.rootContext()->setContextProperty("serial", &serial);
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,
